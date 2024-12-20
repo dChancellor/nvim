@@ -32,5 +32,13 @@ return {
         vim.cmd('DiffviewOpen ' .. primary_branch .. '...HEAD')
       end
     end, { desc = '[G]it [d]iff [p]rimary' })
+    neogit.setup({
+      graph_style = 'unicode',
+      integrations = {
+        diffview = true,
+        telescope = true,
+      },
+
+    })
   end
 }
